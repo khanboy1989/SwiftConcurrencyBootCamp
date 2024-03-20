@@ -76,6 +76,9 @@ struct TaskBootcampView: View {
 //            self.fetchImageTask?.cancel()
 //        }
         .task {
+            // if we call the task from here
+            // view disappear task cancellation
+            //handled automatically
             await viewModel.fetchImage()
         }
 //        .onAppear {
