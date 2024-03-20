@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54464AEF2BAB735D00AF2786 /* TaskBootcampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54464AEE2BAB735D00AF2786 /* TaskBootcampView.swift */; };
 		549BC9BF2BA9FF1D00E57DA4 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549BC9BE2BA9FF1D00E57DA4 /* AsyncAwaitBootcamp.swift */; };
 		54D477F42BA8720000349CC3 /* SwiftConcurencyBootcampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D477F32BA8720000349CC3 /* SwiftConcurencyBootcampApp.swift */; };
 		54D477F62BA8720000349CC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D477F52BA8720000349CC3 /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54464AEE2BAB735D00AF2786 /* TaskBootcampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBootcampView.swift; sourceTree = "<group>"; };
 		549BC9BE2BA9FF1D00E57DA4 /* AsyncAwaitBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitBootcamp.swift; sourceTree = "<group>"; };
 		54D477F02BA8720000349CC3 /* SwiftConcurencyBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurencyBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D477F32BA8720000349CC3 /* SwiftConcurencyBootcampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurencyBootcampApp.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				54D477F52BA8720000349CC3 /* ContentView.swift */,
 				54D477F72BA8720100349CC3 /* Assets.xcassets */,
 				54D477F92BA8720100349CC3 /* Preview Content */,
+				54464AEE2BAB735D00AF2786 /* TaskBootcampView.swift */,
 			);
 			path = SwiftConcurencyBootcamp;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				54D478042BA880C800349CC3 /* DownloadImageAsync.swift in Sources */,
 				54D478022BA8721700349CC3 /* DoCatchTryThrowsBootcamp.swift in Sources */,
 				54D477F62BA8720000349CC3 /* ContentView.swift in Sources */,
+				54464AEF2BAB735D00AF2786 /* TaskBootcampView.swift in Sources */,
 				549BC9BF2BA9FF1D00E57DA4 /* AsyncAwaitBootcamp.swift in Sources */,
 				54D477F42BA8720000349CC3 /* SwiftConcurencyBootcampApp.swift in Sources */,
 			);
