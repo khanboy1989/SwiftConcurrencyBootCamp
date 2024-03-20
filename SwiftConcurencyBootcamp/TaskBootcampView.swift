@@ -18,6 +18,7 @@ class TaskBootcampViewModel: ObservableObject {
             let (data, _) = try await URLSession.shared.data(from: url, delegate: nil)
            await MainActor.run(body: {
                 self.image = UIImage(data: data)
+               print("IMAGE RETURNED SUCCESSFULLY!")
             })
         }catch {
             print("error = \(error.localizedDescription)")
@@ -39,8 +40,21 @@ class TaskBootcampViewModel: ObservableObject {
     }
 }
 
+struct TaskBootcampHomeView: View {
+    var body: some View {
+        NavigationView {
+            ZStack {
+                NavigationLink("CLICK ME! 🤓", destination: {
+                    TaskBootcampView()
+                })
+            }
+        }
+    }
+}
+
 struct TaskBootcampView: View {
     @StateObject private var viewModel = TaskBootcampViewModel()
+   @State private var fetchImageTask: Task<Void, Never>? = nil
     
     var body: some View {
         VStack(spacing: 40){
@@ -51,22 +65,28 @@ struct TaskBootcampView: View {
                     .frame(width: 200, height: 200)
             }
             
-            if let image = viewModel.image {
+            if let image = viewModel.image2 {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
             }
-        }.onAppear {
-            Task {
-               await viewModel.fetchImage()
-            }
-            Task {
-                await viewModel.fetchImage2()
-            }
+        }
+//        .onDisappear {
+//            self.fetchImageTask?.cancel()
+//        }
+        .task {
+            await viewModel.fetchImage()
+        }
+//        .onAppear {
+//            self.fetchImageTask =  Task {
+//               await viewModel.fetchImage()
+//        }
+//            Task {
+//                await viewModel.fetchImage2()
+//            }
         }
     }
-}
 
 #Preview {
     TaskBootcampView()
