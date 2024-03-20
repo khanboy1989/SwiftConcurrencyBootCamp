@@ -33,10 +33,31 @@ class AsyncAwaitBootcampViewModel: ObservableObject {
         let author1 = "Author1: \(Thread.current)"
         self.dataArray.append(author1)
         
-        try? await Task.sleep(nanoseconds: 2_000_000_0000)
+        try? await Task.sleep(nanoseconds: 2_000_000_000)
         
         let author2 = "Author2: \(Thread.current)"
-        self.dataArray.append(author2)
+        
+        await MainActor.run(body: {
+            self.dataArray.append(author2)
+            
+            let author3 = "Author3 \(Thread.current)"
+            self.dataArray.append(author3)
+        })
+        
+        await addSomething()
+    }
+    
+    func addSomething() async  {
+        try? await Task.sleep(nanoseconds: 2_000_000_000)
+        
+        let something1 = "Something1: \(Thread.current)"
+        
+        await MainActor.run(body: {
+            self.dataArray.append(something1)
+            
+            let something2 = "Something2: \(Thread.current)"
+            self.dataArray.append(something2)
+        })
     }
 
 }
@@ -58,6 +79,9 @@ struct AsyncAwaitBootcamp: View {
             
             Task {
                await viewModel.addAuthor1()
+               await viewModel.addSomething()
+                let finalText = "FINAL TEXT! \(Thread.current)"
+                viewModel.dataArray.append(finalText)
             }
         }
         
