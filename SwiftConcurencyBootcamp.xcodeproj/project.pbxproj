@@ -15,6 +15,7 @@
 		54D477FB2BA8720100349CC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D477FA2BA8720100349CC3 /* Preview Assets.xcassets */; };
 		54D478022BA8721700349CC3 /* DoCatchTryThrowsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D478012BA8721700349CC3 /* DoCatchTryThrowsBootcamp.swift */; };
 		54D478042BA880C800349CC3 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D478032BA880C800349CC3 /* DownloadImageAsync.swift */; };
+		EB7195A02BAC5C8200B61940 /* CancellableTaskBootcampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB71959F2BAC5C8200B61940 /* CancellableTaskBootcampView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		54D477FA2BA8720100349CC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54D478012BA8721700349CC3 /* DoCatchTryThrowsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrowsBootcamp.swift; sourceTree = "<group>"; };
 		54D478032BA880C800349CC3 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
+		EB71959F2BAC5C8200B61940 /* CancellableTaskBootcampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableTaskBootcampView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,14 +61,14 @@
 		54D477F22BA8720000349CC3 /* SwiftConcurencyBootcamp */ = {
 			isa = PBXGroup;
 			children = (
-				549BC9BE2BA9FF1D00E57DA4 /* AsyncAwaitBootcamp.swift */,
-				54D478032BA880C800349CC3 /* DownloadImageAsync.swift */,
-				54D478012BA8721700349CC3 /* DoCatchTryThrowsBootcamp.swift */,
+				EB71959E2BAC5C5D00B61940 /* DoCatchTry */,
+				EB71959D2BAC5C5500B61940 /* DownloadImage */,
+				EB71959C2BAC5C4300B61940 /* AsyncAwait */,
+				EB71959B2BAC5C3800B61940 /* Task */,
 				54D477F32BA8720000349CC3 /* SwiftConcurencyBootcampApp.swift */,
 				54D477F52BA8720000349CC3 /* ContentView.swift */,
 				54D477F72BA8720100349CC3 /* Assets.xcassets */,
 				54D477F92BA8720100349CC3 /* Preview Content */,
-				54464AEE2BAB735D00AF2786 /* TaskBootcampView.swift */,
 			);
 			path = SwiftConcurencyBootcamp;
 			sourceTree = "<group>";
@@ -77,6 +79,39 @@
 				54D477FA2BA8720100349CC3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EB71959B2BAC5C3800B61940 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				54464AEE2BAB735D00AF2786 /* TaskBootcampView.swift */,
+				EB71959F2BAC5C8200B61940 /* CancellableTaskBootcampView.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		EB71959C2BAC5C4300B61940 /* AsyncAwait */ = {
+			isa = PBXGroup;
+			children = (
+				549BC9BE2BA9FF1D00E57DA4 /* AsyncAwaitBootcamp.swift */,
+			);
+			path = AsyncAwait;
+			sourceTree = "<group>";
+		};
+		EB71959D2BAC5C5500B61940 /* DownloadImage */ = {
+			isa = PBXGroup;
+			children = (
+				54D478032BA880C800349CC3 /* DownloadImageAsync.swift */,
+			);
+			path = DownloadImage;
+			sourceTree = "<group>";
+		};
+		EB71959E2BAC5C5D00B61940 /* DoCatchTry */ = {
+			isa = PBXGroup;
+			children = (
+				54D478012BA8721700349CC3 /* DoCatchTryThrowsBootcamp.swift */,
+			);
+			path = DoCatchTry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +187,7 @@
 				54D478042BA880C800349CC3 /* DownloadImageAsync.swift in Sources */,
 				54D478022BA8721700349CC3 /* DoCatchTryThrowsBootcamp.swift in Sources */,
 				54D477F62BA8720000349CC3 /* ContentView.swift in Sources */,
+				EB7195A02BAC5C8200B61940 /* CancellableTaskBootcampView.swift in Sources */,
 				54464AEF2BAB735D00AF2786 /* TaskBootcampView.swift in Sources */,
 				549BC9BF2BA9FF1D00E57DA4 /* AsyncAwaitBootcamp.swift in Sources */,
 				54D477F42BA8720000349CC3 /* SwiftConcurencyBootcampApp.swift in Sources */,

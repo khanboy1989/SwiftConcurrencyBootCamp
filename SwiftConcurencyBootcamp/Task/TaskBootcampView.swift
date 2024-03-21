@@ -16,10 +16,13 @@ class TaskBootcampViewModel: ObservableObject {
         do {
             guard let url = URL(string: "https://picsum.photos/200") else { return }
             let (data, _) = try await URLSession.shared.data(from: url, delegate: nil)
-           await MainActor.run(body: {
+            await MainActor.run(body: {
                 self.image = UIImage(data: data)
                print("IMAGE RETURNED SUCCESSFULLY!")
             })
+            
+            // Makes sure if the task already being cancelled
+            //Task.checkCancellation()
         }catch {
             print("error = \(error.localizedDescription)")
         }
@@ -32,7 +35,6 @@ class TaskBootcampViewModel: ObservableObject {
             
             await MainActor.run(body: {
                 self.image2 = UIImage(data: data)
-
             })
         }catch {
             print("error = \(error.localizedDescription)")
@@ -53,8 +55,8 @@ struct TaskBootcampHomeView: View {
 }
 
 struct TaskBootcampView: View {
-    @StateObject private var viewModel = TaskBootcampViewModel()
-   @State private var fetchImageTask: Task<Void, Never>? = nil
+    @ObservedObject private var viewModel = TaskBootcampViewModel()
+    @State private var fetchImageTask: Task<Void, Never>? = nil
     
     var body: some View {
         VStack(spacing: 40){
