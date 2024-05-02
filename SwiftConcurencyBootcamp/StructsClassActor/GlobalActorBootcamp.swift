@@ -7,12 +7,46 @@
 
 import SwiftUI
 
+actor MyNewDataManager {
+    
+    func getDataFromDatabase() -> [String] {
+        return ["One", "Two", "Three"]
+    }
+}
+
+class GlobalActorBootcampViewModel: ObservableObject {
+    @Published var dataArray = [String]()
+    
+    let manager = MyNewDataManager()
+    
+    func getData() async {
+        
+        //HEAVY COMPLEX METHODS 
+        
+        let data = await manager.getDataFromDatabase()
+        self.dataArray = data
+    }
+}
+
 struct GlobalActorBootcamp: View {
+    
+    @StateObject private var viewModel = GlobalActorBootcampViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack {
+                ForEach(viewModel.dataArray, id: \.self) {
+                    Text($0)
+                        .font(.headline)
+                }
+            }
+        }.task {
+            await viewModel.getData()
+        }
     }
 }
 
 #Preview {
     GlobalActorBootcamp()
 }
+
