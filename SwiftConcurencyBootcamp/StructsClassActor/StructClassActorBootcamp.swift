@@ -47,7 +47,7 @@ import SwiftUI
  
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
- STRUCK:
+ STRUCT:
  - Based on values
  - can be mutated
  - Stored in the stack
