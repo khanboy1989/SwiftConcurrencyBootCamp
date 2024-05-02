@@ -7,24 +7,38 @@
 
 import SwiftUI
 
+//Class or Struct
+//Because we marked this as globalActor
+// it will run the methods in global actor (kind of the different thread)
+/*
+ https://blog.devgenius.io/how-to-use-mainactor-and-globalactor-d5fd3794903d
+ */
+@globalActor struct MyFirstGlobalActor {
+    static var shared = MyNewDataManager()
+}
+
+
 actor MyNewDataManager {
     
     func getDataFromDatabase() -> [String] {
-        return ["One", "Two", "Three"]
+        return ["One", "Two", "Three", "Four"]
     }
 }
 
 class GlobalActorBootcampViewModel: ObservableObject {
     @Published var dataArray = [String]()
     
-    let manager = MyNewDataManager()
+    let manager = MyFirstGlobalActor.shared
     
-    func getData() async {
-        
-        //HEAVY COMPLEX METHODS 
-        
-        let data = await manager.getDataFromDatabase()
-        self.dataArray = data
+    @MyFirstGlobalActor
+    func getData() {
+        // HEAVY COMPLEX METHODS
+        Task {
+            let data = await manager.getDataFromDatabase()
+            await MainActor.run(body: {
+                self.dataArray = data
+            })
+        }
     }
 }
 
@@ -42,6 +56,8 @@ struct GlobalActorBootcamp: View {
             }
         }.task {
             await viewModel.getData()
+        }.onAppear {
+            
         }
     }
 }
