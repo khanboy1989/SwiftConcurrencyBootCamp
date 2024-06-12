@@ -33,7 +33,7 @@ struct MyUserInfo: Sendable {
 //if we add var name: String since they can be changed by other thread in that case we can inherit the sendable
 //But it is not a good practice, because the classes are reference type
 //also if we refer to use var name: String we can use @unchecked Sendable but still it is dangerous to use
-// if we include     let queue = DispatchQueue(label: "com.MyApp.MyClassUserInfo")
+// if we include let queue = DispatchQueue(label: "com.MyApp.MyClassUserInfo")
 // in this case they would be thread safe and we can send it to thread to change the name so we can mark them @unchecked Sendable
 final class MyClassUserInfo: @unchecked Sendable {
     var name : String

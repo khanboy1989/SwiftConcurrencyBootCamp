@@ -68,7 +68,6 @@ import SwiftUI
  - Structs: Data Models, Views
  - Class: ViewModels
  - Actor: Shared 'Manager' and 'Data Store'
- 
  */
 
 actor StructClassActorBootcampManager {
