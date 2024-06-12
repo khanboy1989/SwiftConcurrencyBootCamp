@@ -12,12 +12,12 @@ Most of the examples are shown in Swiftui views.
 
 For example:
 
-1 - Async/Await and Actors
-2 - Affect of Do Try Catch both on Swift concurreny
-3 - Different type of asyc code in Swift such as @escaping closures, combine and async await
-4 - How and where should we use Task in swiftui 
-5 - How to use Async let for groupping our async calls and waiting for all them to be completed 
-6 - How and Where to use the TaskGroup
-7 - Conversion of @escaping async code to continuation so that they can be converted to async/await 
-8 - How to use actos (swift's new way of defining class types) 
+ - Async/Await and Actors
+ - Affect of Do Try Catch both on Swift concurreny
+ - Different type of asyc code in Swift such as @escaping closures, combine and async await
+ - How and where should we use Task in swiftui 
+ - How to use Async let for groupping our async calls and waiting for all them to be completed 
+ - How and Where to use the TaskGroup
+ - Conversion of @escaping async code to continuation so that they can be converted to async/await 
+ - How to use actos (swift's new way of defining class types) 
 
