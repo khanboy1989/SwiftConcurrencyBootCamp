@@ -42,6 +42,11 @@ actor CurrentUserManager {
             print("Failed to sleep: \(error)")
         }
     }
+    
+    // This will use the struct type for update
+    func updateDatabase(userInfo: MyUserInfo) async {
+        
+    }
 }
 
 // we can safely send this type in to the concurrent code
@@ -104,6 +109,8 @@ class SendableBootcampViewModel: ObservableObject {
     //        await manager.updateDatabase(userInfo: info)
     //    }
     
+    // This is for class implementation
+    // Class Type Model Non-Thread-Safe Read & Write
     func updateCurrentUserInfo() async {
         let info = MyClassUserInfo(name: "Initial Name")
         
@@ -122,6 +129,7 @@ class SendableBootcampViewModel: ObservableObject {
         await manager.updateDatabase(userInfo: info)
     }
     
+    // Class Type Model Thread-Safe Read & Write
     func updateCurrentUserInfoTwo() async {
         let info = MyClassUserInfo(name: "Initial Name")
         
@@ -141,6 +149,8 @@ class SendableBootcampViewModel: ObservableObject {
         // After concurrent tasks, attempt to send data to the actor
         await manager.updateDatabase(userInfo: info)
     }
+    
+    
 }
 
 struct SendableBootcamp: View {
