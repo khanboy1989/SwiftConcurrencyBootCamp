@@ -14,7 +14,7 @@ import SwiftUI
 /*
  The problem:
  
- hreadSanitizer: Swift access race (pid=35898)
+ ThreadSanitizer: Swift access race (pid=35898)
  Modifying access of Swift variable at 0x000109f5c350 by thread T2:
  #0 SwiftConcurencyBootcamp.MyDataManager.getRandomData() -> Swift.Optional<Swift.String> <null> (SwiftConcurencyBootcamp:arm64+0x100043f20)
  #1 closure #1 @Sendable () -> () in closure #2 (Foundation.Date) -> () in SwiftConcurencyBootcamp.BrowseView.body.getter : some <null> (SwiftConcurencyBootcamp:arm64+0x100047ee4)
@@ -58,8 +58,6 @@ class MyDataManager {
 // Easy to read
 // NO need to deal with locks
 // In order to access something inside the actor we need to use await keyword
-
-
 actor MyActorDataManager {
     static let instance = MyActorDataManager()
     private init() {}
