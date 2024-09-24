@@ -9,7 +9,7 @@ import SwiftUI
 
 final class RefreshableDataService {
     func getData() async throws -> [String] {
-        try? await Task.sleep(nanoseconds: 5_000_000_000)
+        try? await Task.sleep(nanoseconds: 5_000_000_000) // simulate real network call
         return ["Apple", "Orange", "Banana"].shuffled()
     }
 }
@@ -39,7 +39,7 @@ struct RefreshableBootcamp: View {
                             .font(.headline)
                     }
                 }
-            }.refreshable {
+            }.refreshable { // this is async so that is way refreshable indicator will be shown until the real task is completed
                 await viewModel.loadData()
             }
             .navigationTitle("Refreshable")

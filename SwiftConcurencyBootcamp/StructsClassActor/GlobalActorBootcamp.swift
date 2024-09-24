@@ -17,9 +17,7 @@ import SwiftUI
     static var shared = MyNewDataManager()
 }
 
-
 actor MyNewDataManager {
-    
     func getDataFromDatabase() -> [String] {
         return ["One", "Two", "Three", "Four"]
     }
