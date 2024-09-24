@@ -49,7 +49,7 @@ final class MVVMBootcampViewModel: ObservableObject {
         let task = Task {
             do {
 //               myData = try await self.managerActor.getData()
-                myData = try await self.managerClass.getData()
+                myData = try await self.managerActor.getData()
             } catch {
                 print(error)
             }
