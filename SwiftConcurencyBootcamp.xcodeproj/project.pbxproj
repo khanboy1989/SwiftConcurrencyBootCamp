@@ -22,6 +22,8 @@
 		54D477FB2BA8720100349CC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D477FA2BA8720100349CC3 /* Preview Assets.xcassets */; };
 		54D478022BA8721700349CC3 /* DoCatchTryThrowsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D478012BA8721700349CC3 /* DoCatchTryThrowsBootcamp.swift */; };
 		54D478042BA880C800349CC3 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D478032BA880C800349CC3 /* DownloadImageAsync.swift */; };
+		EB0E36E52CA2D28500F1087D /* StrongSelfBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E36E42CA2D28500F1087D /* StrongSelfBootcamp.swift */; };
+		EB0E36E82CA2E20E00F1087D /* MVVMBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0E36E72CA2E20A00F1087D /* MVVMBootcamp.swift */; };
 		EB7195A02BAC5C8200B61940 /* CancellableTaskBootcampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB71959F2BAC5C8200B61940 /* CancellableTaskBootcampView.swift */; };
 		EB99B3BD2BE3A86E00613B8A /* GlobalActorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB99B3BC2BE3A86E00613B8A /* GlobalActorBootcamp.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +45,8 @@
 		54D477FA2BA8720100349CC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54D478012BA8721700349CC3 /* DoCatchTryThrowsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrowsBootcamp.swift; sourceTree = "<group>"; };
 		54D478032BA880C800349CC3 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
+		EB0E36E42CA2D28500F1087D /* StrongSelfBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongSelfBootcamp.swift; sourceTree = "<group>"; };
+		EB0E36E72CA2E20A00F1087D /* MVVMBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMBootcamp.swift; sourceTree = "<group>"; };
 		EB71959F2BAC5C8200B61940 /* CancellableTaskBootcampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableTaskBootcampView.swift; sourceTree = "<group>"; };
 		EB99B3BC2BE3A86E00613B8A /* GlobalActorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalActorBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +131,8 @@
 		54D477F22BA8720000349CC3 /* SwiftConcurencyBootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				EB0E36E62CA2E1F900F1087D /* MVVMBootcamp */,
+				EB0E36E32CA2D26000F1087D /* StrongSelf */,
 				54AB69422BE428D0001F2846 /* AsyncPublishers */,
 				54AB693F2BE40E61001F2846 /* Sendable */,
 				548F707F2BDEC8E500B76C1D /* StructsClassActor */,
@@ -151,6 +157,22 @@
 				54D477FA2BA8720100349CC3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EB0E36E32CA2D26000F1087D /* StrongSelf */ = {
+			isa = PBXGroup;
+			children = (
+				EB0E36E42CA2D28500F1087D /* StrongSelfBootcamp.swift */,
+			);
+			path = StrongSelf;
+			sourceTree = "<group>";
+		};
+		EB0E36E62CA2E1F900F1087D /* MVVMBootcamp */ = {
+			isa = PBXGroup;
+			children = (
+				EB0E36E72CA2E20A00F1087D /* MVVMBootcamp.swift */,
+			);
+			path = MVVMBootcamp;
 			sourceTree = "<group>";
 		};
 		EB71959B2BAC5C3800B61940 /* Task */ = {
@@ -267,10 +289,12 @@
 				EB7195A02BAC5C8200B61940 /* CancellableTaskBootcampView.swift in Sources */,
 				54464AEF2BAB735D00AF2786 /* TaskBootcampView.swift in Sources */,
 				548F707E2BDE729600B76C1D /* StructClassActorBootcamp.swift in Sources */,
+				EB0E36E82CA2E20E00F1087D /* MVVMBootcamp.swift in Sources */,
 				548F70812BDEC94F00B76C1D /* ActorsBootcamp.swift in Sources */,
 				549BC9BF2BA9FF1D00E57DA4 /* AsyncAwaitBootcamp.swift in Sources */,
 				54D477F42BA8720000349CC3 /* SwiftConcurencyBootcampApp.swift in Sources */,
 				548A64022BD701A1007906E9 /* CheckedContinuationBootcamp.swift in Sources */,
+				EB0E36E52CA2D28500F1087D /* StrongSelfBootcamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
