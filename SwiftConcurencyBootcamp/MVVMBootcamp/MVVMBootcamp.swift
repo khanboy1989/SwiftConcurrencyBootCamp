@@ -7,12 +7,21 @@
 
 import SwiftUI
 
-final class MVVMBootcampViewModel: ObservableObject {
+final class MyManagerClass {
     
 }
 
+actor MyManagerActor {
+    
+}
+
+final class MVVMBootcampViewModel: ObservableObject {
+    let managerClass = MyManagerClass()
+    let managerActor = MyManagerActor()
+}
+
 struct MVVMBootcamp: View {
-    @StateObject private var viewModel = MVVMBootcampViewModel() 
+    @StateObject private var viewModel = MVVMBootcampViewModel()
     var body: some View {
         Text("Hello World!")
     }
