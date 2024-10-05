@@ -50,11 +50,11 @@ class AsyncAwaitBootcampViewModel: ObservableObject {
     func addSomething() async  {
         try? await Task.sleep(nanoseconds: 2_000_000_000)
         
+        // Here the accessing the current thread is deprecated in Swift 6
         let something1 = "Something1: \(Thread.current)"
         
         await MainActor.run(body: {
             self.dataArray.append(something1)
-            
             let something2 = "Something2: \(Thread.current)"
             self.dataArray.append(something2)
         })

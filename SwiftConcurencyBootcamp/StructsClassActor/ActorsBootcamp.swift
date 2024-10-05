@@ -46,10 +46,11 @@ class MyDataManager {
     private let lock = DispatchQueue(label: "com.MyApp.MyDataManager")
     
     func getRandomData(completion: @escaping(_ title: String?) -> Void) {
-        lock.async {
-            self.data.append(UUID().uuidString)
+        lock.async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.data.append(UUID().uuidString)
             print("Current Thread = \(Thread.current)")
-            completion(self.data.randomElement())
+            completion(strongSelf.data.randomElement())
         }
     }
 }

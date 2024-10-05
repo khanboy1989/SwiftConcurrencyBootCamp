@@ -84,7 +84,7 @@ final class StrongSelfBootcampViewModel: ObservableObject {
         myTasks.append(task2)
     }
     
-    // We purposely do not cancel tasks to keep strong references
+    // We delibaretly do not cancel tasks to keep strong references
     func updateData7() {
         Task {
             self.data = await self.dataService.getData()
