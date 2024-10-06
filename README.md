@@ -8,6 +8,8 @@ You can check out the full video playlist [here](https://www.youtube.com/watch?v
 
 Swift concurrency has revolutionized how we write asynchronous code in Swift, making it easier, cleaner, and safer. As developers, we often face challenges such as managing background tasks, handling errors in async operations, and ensuring thread safety. This repository aims to empower developers by providing a solid understanding of Swift's concurrency model, allowing you to build more efficient and robust applications.
 
+Additionally, all classes and functions in the project come with necessary comments explaining their functionality to make the codebase easier to understand and follow.
+
 ### Why focus on concurrency?
 With modern apps handling network requests, animations, and data processing, concurrency is essential for smooth user experiences. Learning to manage multiple tasks simultaneously—without blocking the main thread—opens the door to more performant and responsive applications. This course is structured to help you grasp every aspect of concurrency, preparing you to write cutting-edge Swift applications with confidence.
 
