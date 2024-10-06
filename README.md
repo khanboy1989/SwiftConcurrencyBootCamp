@@ -44,7 +44,7 @@ The following sections cover a wide range of Swift concurrency topics, with real
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/YourUsername/SwiftConcurrencyBootcamp.git
+   git clone https://github.com/khanboy1989/SwiftConcurrencyBootcamp.git
    
 ## 📖 Resources
 
