@@ -11,7 +11,7 @@ import SwiftUI
 /*
  AsyncStreams are basically same thing as checkedContinuation
  except they return multiple pieces of data over time
- They are publisher & subscriber like Combine 
+ They are publisher & subscriber like Combine
  */
 class AsyncStreamDataManager {
     //AsyncStream accepts generic type data
