@@ -37,9 +37,10 @@ class CheckedContinuationBootcampNetworkManager {
         }
     }
     
+    // Continuation that is triggered only once....
     func getHeardImageFromDatabase() async -> UIImage {
         await withCheckedContinuation { continuation in
-            getHeartImageFromDatabase{ image in
+            getHeartImageFromDatabase { image in
                 continuation.resume(returning: image)
             }
         }
